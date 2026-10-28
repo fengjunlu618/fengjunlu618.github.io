@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Pages 页面索引 · fengjunlu618</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230C1220'/%3E%3Cpath d='M16 7l2.6 5.2 5.8.8-4.2 4.1 1 5.8L16 19.7l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z' fill='%238B7CF6'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg0:#070B14;--bg1:#0C1220;--bg2:#111A2E;
+  --line:rgba(151,168,255,.10);--line2:rgba(151,168,255,.18);
+  --txt0:#EDEFFF;--txt1:#9AA4C4;--txt2:#5F6A8C;
+  --acc:#8B7CF6;--acc2:#5E8BFF;--c3:#E8709E;
+  --serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+  --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg0);background-image:radial-gradient(1100px 520px at 12% -6%,rgba(139,124,246,.16),transparent 60%),radial-gradient(900px 480px at 96% 104%,rgba(94,139,255,.12),transparent 60%);color:var(--txt0);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:44px 28px 64px}
+header{margin-bottom:28px}
+.kicker{font-size:12px;letter-spacing:.22em;color:var(--txt2);margin-bottom:10px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.2vw,40px);line-height:1.25}
+h1 em{font-style:normal;background:linear-gradient(92deg,var(--acc2),var(--acc) 55%,var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--txt1);font-size:14px;margin-top:10px}
+.updated{color:var(--txt2);font-size:12px;margin-top:6px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+.kpi{background:linear-gradient(180deg,rgba(23,31,54,.55),rgba(13,19,34,.85));border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.kpi::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--acc2),var(--acc))}
+.kpi .v{font-size:26px;font-weight:600;font-family:var(--serif);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12px;color:var(--txt1);margin-top:4px}
+.toolbar{display:flex;gap:12px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.search{flex:1;min-width:220px;background:rgba(19,26,46,.8);border:1px solid var(--line2);border-radius:10px;color:var(--txt0);font-family:var(--sans);font-size:14px;padding:10px 14px;outline:none}
+.search:focus{border-color:var(--acc)}
+.search::placeholder{color:var(--txt2)}
+.count{font-size:12px;color:var(--txt2);font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,rgba(23,31,54,.5),rgba(13,19,34,.88));border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.card h2{font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.02em;word-break:break-all}
+.card .base{font-size:11px;color:var(--txt2);word-break:break-all;margin:4px 0 10px}
+.card ul{list-style:none}
+.card li{border-top:1px solid var(--line);padding:7px 0}
+.card a{color:var(--txt1);font-size:13px;text-decoration:none;word-break:break-all;transition:color .15s}
+.card a:hover{color:var(--acc2)}
+.empty,.err{padding:40px;text-align:center;color:var(--txt2);font-size:14px}
+footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--txt2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:640px){.wrap{padding:26px 16px 44px}.kpis{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">PAGES INDEX · AUTO REFRESH DAILY</div>
+    <h1>GitHub Pages <em>页面索引</em></h1>
+    <p class="lead">自动扫描账号下所有启用 GitHub Pages 的仓库，任何新增页面都会在每日定时刷新后出现在这里</p>
+    <p class="updated" id="updated">清单生成时间：加载中…</p>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi"><div class="v" id="k-sites">–</div><div class="l">Pages 站点</div></div>
+    <div class="kpi"><div class="v" id="k-pages">–</div><div class="l">HTML 页面</div></div>
+    <div class="kpi"><div class="v" id="k-repos">–</div><div class="l">仓库总数（全账号）</div></div>
+  </section>
+
+  <div class="toolbar">
+    <input class="search" id="q" type="search" placeholder="搜索仓库或页面名称…" autocomplete="off">
+    <span class="count" id="shown">–</span>
+  </div>
+
+  <div id="list"><div class="empty">正在加载清单…</div></div>
+
+  <footer>
+    <span>数据源：GitHub API 每日自动扫描，生成 pages.json</span>
+    <span id="stamp">fengjunlu618</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+var listEl = document.getElementById('list');
+var qEl = document.getElementById('q');
+var shownEl = document.getElementById('shown');
+
+function render(data){
+  var q = (qEl.value || '').trim().toLowerCase();
+  var sites = (data.sites || []).filter(function(s){
+    if (!q) return true;
+    return s.repo.toLowerCase().indexOf(q) >= 0 ||
+      s.pages.some(function(p){ return p.path.toLowerCase().indexOf(q) >= 0; });
+  });
+  var pageCount = 0;
+  sites.forEach(function(s){ pageCount += s.pages.length; });
+  shownEl.textContent = '显示 ' + sites.length + ' 个站点 / ' + pageCount + ' 页';
+
+  var html = '';
+  sites.forEach(function(s){
+    html += '<div class="card"><h2>' + s.repo + '</h2>' +
+      '<div class="base">' + s.base + '</div><ul>';
+    s.pages.forEach(function(p){
+      html += '<li><a href="' + p.url + '" target="_blank" rel="noopener">' + p.path + '</a></li>';
+    });
+    html += '</ul></div>';
+  });
+  listEl.innerHTML = html || '<div class="empty">没有匹配的页面</div>';
+}
+
+function renderKpi(data){
+  var k1 = document.getElementById('k-sites');
+  var k2 = document.getElementById('k-pages');
+  var k3 = document.getElementById('k-repos');
+  if (k1) k1.textContent = data.total_sites;
+  if (k2) k2.textContent = data.total_pages;
+  if (k3) k3.textContent = data.total_repos;
+  var up = document.getElementById('updated');
+  if (up) up.textContent = '清单生成时间：' + (data.generated_at || '未知');
+}
+
+fetch('pages.json', { cache: 'no-store' })
+  .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(d){
+    renderKpi(d);
+    render(d);
+  })
+  .catch(function(){ listEl.innerHTML = '<div class="err">清单加载失败，请确认 pages.json 已生成且与本页同目录</div>'; });
+
+qEl.addEventListener('input', function(){ fetch('pages.json', { cache: 'no-store' }).then(function(r){ return r.json(); }).then(render).catch(function(){}); });
+})();
+</script>
+</body>
+</html>

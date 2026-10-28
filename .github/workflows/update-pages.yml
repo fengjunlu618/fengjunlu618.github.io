@@ -1,0 +1,40 @@
+name: Update Pages Index
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 每天 UTC 02:00（北京时间 10:00）
+  workflow_dispatch:      # 可手动触发
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate pages.json
+        run: python3 generate_pages_index.py
+        env:
+          GHPAGES_INDEX_TOKEN: ${{ secrets.GHPAGES_INDEX_TOKEN }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "pages-index-bot"
+          git config user.email "pages-index-bot@users.noreply.github.com"
+          git add pages.json
+          if git diff --cached --quiet; then
+            echo "no changes, skip"
+          else
+            git commit -m "chore: refresh pages index"
+            git push
+          fi
