@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-09 17:00:54",
- "total_sites": 15,
- "total_pages": 54,
- "total_repos": 99,
+ "generated_at": "2026-11-10 17:09:08",
+ "total_sites": 17,
+ "total_pages": 56,
+ "total_repos": 102,
  "sites": [
   {
    "repo": "agent-skills-taxonomy",
@@ -245,6 +245,17 @@
    ]
   },
   {
+   "repo": "life-settlement-cards",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/life-settlement-cards/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/life-settlement-cards/index.html"
+    }
+   ]
+  },
+  {
    "repo": "offline-pdf-tools",
    "branch": "main",
    "base": "https://fengjunlu618.github.io/offline-pdf-tools/",
@@ -263,6 +274,17 @@
     {
      "path": "simple-chart.html",
      "url": "https://fengjunlu618.github.io/pages-deploy-test/simple-chart.html"
+    }
+   ]
+  },
+  {
+   "repo": "public-api-toys",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/public-api-toys/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/public-api-toys/index.html"
     }
    ]
   },
