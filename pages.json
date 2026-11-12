@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-11 16:47:11",
- "total_sites": 17,
- "total_pages": 56,
- "total_repos": 102,
+ "generated_at": "2026-11-12 17:11:41",
+ "total_sites": 18,
+ "total_pages": 57,
+ "total_repos": 103,
  "sites": [
   {
    "repo": "agent-skills-taxonomy",
@@ -12,6 +12,17 @@
     {
      "path": "agent-skills-taxonomy.html",
      "url": "https://fengjunlu618.github.io/agent-skills-taxonomy/agent-skills-taxonomy.html"
+    }
+   ]
+  },
+  {
+   "repo": "ai-money-maker-handbook",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/ai-money-maker-handbook/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/ai-money-maker-handbook/index.html"
     }
    ]
   },
