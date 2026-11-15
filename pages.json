@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-14 16:30:52",
- "total_sites": 18,
- "total_pages": 57,
- "total_repos": 105,
+ "generated_at": "2026-11-15 16:46:04",
+ "total_sites": 19,
+ "total_pages": 58,
+ "total_repos": 109,
  "sites": [
   {
    "repo": "agent-skills-taxonomy",
@@ -42,6 +42,17 @@
     {
      "path": "大语言模型发展路线图.html",
      "url": "https://fengjunlu618.github.io/ai-roadmap-articles/大语言模型发展路线图.html"
+    }
+   ]
+  },
+  {
+   "repo": "bingfang-qiri",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/bingfang-qiri/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/bingfang-qiri/index.html"
     }
    ]
   },
