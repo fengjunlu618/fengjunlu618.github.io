@@ -1,9 +1,20 @@
 {
- "generated_at": "2026-11-23 18:13:35",
- "total_sites": 19,
- "total_pages": 58,
- "total_repos": 110,
+ "generated_at": "2026-11-24 19:57:20",
+ "total_sites": 20,
+ "total_pages": 59,
+ "total_repos": 111,
  "sites": [
+  {
+   "repo": "agent-lexicon",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/agent-lexicon/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/agent-lexicon/index.html"
+    }
+   ]
+  },
   {
    "repo": "agent-skills-taxonomy",
    "branch": "main",
