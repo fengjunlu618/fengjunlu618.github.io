@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-25 18:50:11",
- "total_sites": 21,
- "total_pages": 60,
- "total_repos": 112,
+ "generated_at": "2026-11-26 18:23:42",
+ "total_sites": 23,
+ "total_pages": 62,
+ "total_repos": 114,
  "sites": [
   {
    "repo": "agent-lexicon",
@@ -296,6 +296,28 @@
     {
      "path": "index.html",
      "url": "https://fengjunlu618.github.io/magi2-article-archive/index.html"
+    }
+   ]
+  },
+  {
+   "repo": "magi2-research",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/magi2-research/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/magi2-research/index.html"
+    }
+   ]
+  },
+  {
+   "repo": "magi2-video-directory-150",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/magi2-video-directory-150/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/magi2-video-directory-150/index.html"
     }
    ]
   },
