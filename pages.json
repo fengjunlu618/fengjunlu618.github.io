@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 18:29:02",
- "total_sites": 24,
- "total_pages": 63,
- "total_repos": 115,
+ "generated_at": "2026-11-28 17:45:05",
+ "total_sites": 25,
+ "total_pages": 64,
+ "total_repos": 116,
  "sites": [
   {
    "repo": "agent-lexicon",
@@ -285,6 +285,17 @@
     {
      "path": "index.html",
      "url": "https://fengjunlu618.github.io/life-settlement-cards/index.html"
+    }
+   ]
+  },
+  {
+   "repo": "lushi-clan",
+   "branch": "main",
+   "base": "https://fengjunlu618.github.io/lushi-clan/",
+   "pages": [
+    {
+     "path": "index.html",
+     "url": "https://fengjunlu618.github.io/lushi-clan/index.html"
     }
    ]
   },
